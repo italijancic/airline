@@ -1,10 +1,9 @@
-from django.http.response import Http404, HttpResponse
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, Http404, HttpResponseNotFound
+from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.db.models import Max
 
-from .models import Flight, Airport, Passenger
+from .models import Flight, Passenger
 
 # Create your views here.
 
