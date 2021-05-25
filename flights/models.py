@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -27,6 +28,7 @@ class Flight(models.Model):
         return self.origin != self.destination and self.duration > 0
 
 class Passenger(models.Model):
+    created_on = models.DateTimeField(default=timezone.now)
     first = models.CharField(max_length=64)
     last = models.CharField(max_length=64)
     flights = models.ManyToManyField(Flight, blank=True, related_name="passengers")
