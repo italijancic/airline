@@ -19,16 +19,20 @@
         {% endfor %}
     </ul>
 
-    <h2>Add passenger</h2>
+    <h3>Add passenger</h3>
 
     <form action="{% url 'book' flight.id %}" method="POST">
         {% csrf_token %}
-        <select name="passenger">
-            {% for passenger in non_passengers %}
-                <option value="{{ passenger.id }}">{{ passenger }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit">
+        <div class="mb-3">
+            <select class="form-select"name="passenger">
+                {% for passenger in non_passengers %}
+                    <option value="{{ passenger.id }}">{{ passenger }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
     </form>
     <br>
     <a href="{% url 'index_flights' %}">Back to Flight List</a>

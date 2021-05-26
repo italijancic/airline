@@ -14,3 +14,9 @@ services:
             - .:/usr/src/app
         ports:
             - "8000:8000"
+        environment:
+            - DB_NAME=postgres
+            - DB_USER=postgres
+            - DB_PASSWORD=postgres
+            - DB_HOST=db
+            - DB_PORT=5432

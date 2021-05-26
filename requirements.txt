@@ -1,4 +1,7 @@
-django
-psycopg2
-selenium
-django-environ
+Django==3.2
+django-environ==0.4.5
+psycopg2==2.8.6
+Pygments==2.7.3
+pylint==2.6.0
+pylint-django==2.4.4
+pylint-plugin-utils==0.6
